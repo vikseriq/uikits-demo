@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buefy</title>
+</head>
+<body>
+<div id="app"></div>
+<script type="module">
+  // https://buefy.org/documentation/start/
+  import Vue from "vue/dist/vue.common.dev";
+
+  import Buefy from 'buefy'
+  import 'buefy/dist/buefy.css'
+  import '@mdi/font/css/materialdesignicons.css'
+
+  Vue.use(Buefy)
+
+  import app from '#/buefyApp.vue';
+
+  new Vue({
+    render: h => h(app)
+  }).$mount('#app');
+
+</script>
+</body>
+</html>

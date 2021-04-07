@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vuetify</title>
+</head>
+<body>
+<div id="app"></div>
+<script type="module">
+  // https://vuetifyjs.com/en/getting-started/installation/
+  import Vue from 'vue'
+  import Vuetify from 'vuetify'
+  import 'vuetify/dist/vuetify.css'
+  import '@mdi/font/css/materialdesignicons.css'
+  import app from "#/vfApp.vue";
+
+  Vue.use(Vuetify)
+  const vuetify = new Vuetify({
+    icons: {
+      iconfont: 'mdi'
+    }
+  })
+
+  new Vue({
+    vuetify,
+    render: h => h(app)
+  }).$mount('#app')
+
+</script>
+</body>
+</html>

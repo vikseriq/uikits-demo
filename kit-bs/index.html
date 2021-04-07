@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+</head>
+<body>
+<div id="app"></div>
+<script type="module">
+  // https://bootstrap-vue.org/docs
+  import Vue from 'vue'
+  import {BootstrapVue} from 'bootstrap-vue'
+
+  import 'bootstrap/dist/css/bootstrap.css'
+  import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+  import app from '#/bsApp.vue';
+
+  Vue.use(BootstrapVue)
+
+  new Vue({
+    render: h => h(app)
+  }).$mount('#app');
+
+</script>
+</body>
+</html>
