@@ -3,7 +3,7 @@
 Purpose: showcases of the same app on different UI frameworks
  without extra code to leverage maximum from built-in kits' components & styles.
 
-## Demo
+## [Live Demo](https://vikseriq.github.io/uikits-demo/)
 
 Build with Vite for Vue 2.
  Each kit composed into separate chunk and loads in iframe – it prevents global stylesheet overlap.

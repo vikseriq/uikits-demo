@@ -1,16 +1,18 @@
 {
   "name": "uikit-demos",
   "version": "1.0.0",
-  "description": "A pick of different Vue UIKit frameworks",
+  "description": "Showcase of different Vue 2 compatible UI frameworks",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "deploy": "gh-pages --dist 'uikits-demo' --branch 'gh-pages' --message 'Publish to gh-pages'"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "deepmerge": "^4.2.2",
+    "gh-pages": "^3.1.0",
     "postcss": "^8.2.9",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",

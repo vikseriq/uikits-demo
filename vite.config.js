@@ -12,6 +12,7 @@ const kitPaths = [
  */
 const config = {
   plugins: [createVuePlugin()],
+  base: '/uikits-demo/',
   resolve: {
     alias: [
       {
@@ -21,7 +22,9 @@ const config = {
     ]
   },
   build: {
+    outDir: 'uikits-demo/',
     brotliSize: false,
+    minify: 'esbuild',
     rollupOptions: {
       // compose input subpaths dynamically
       input: kitPaths.reduce((paths, i) => {

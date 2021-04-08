@@ -7,14 +7,28 @@
 <body>
 <div id="app">
     <div>
+        <div style="text-align: center;font-size:1.2em;">
+            UIKits demo
+            <a href="https://github.com/vikseriq/uikits-demo/" target="_blank">[repo]</a>
+            <hr />
+        </div>
         <nav>
             <div v-for="demo in demos" :key="demo.code">
-                <a :href="'/'+demo.code+'/'" target="viewport">{{ demo.label }}</a>
+                <a :href="'./'+demo.code+'/'" target="viewport">{{ demo.label }}</a>
             </div>
         </nav>
 
-        <iframe id="viewport" name="viewport" frameborder="off"
-        ></iframe>
+        <iframe ref="iframe" id="viewport" name="viewport" frameborder="off">
+            <div style="display: flex;
+                        align-content: start;
+                        height: 80vh;
+                        align-items: center;
+                        justify-content: center;
+                        color: gray;">
+                <h2 style="text-align:center">pick a kit from the list</h2>
+            </div>
+        </iframe>
+
     </div>
 </div>
 <script type="module">
@@ -31,6 +45,10 @@
           {code: 'kit-ele', label: 'Element'},
         ]
       }
+    },
+    mounted() {
+      // put placeholder html into iframe document
+      this.$refs.iframe.contentDocument.body.innerHTML = this.$refs.iframe.innerHTML;
     }
   })
 </script>
@@ -47,7 +65,7 @@
 
     #viewport {
         width: calc(100% - 4em);
-        height: 80vh;
+        height: 70vh;
         box-shadow: 1px 1px 7px 4px gray;
         margin: 1em;
         padding: 15px;
