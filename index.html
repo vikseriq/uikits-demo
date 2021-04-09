@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UIKit demos</title>
+<script type="module" crossorigin src="/uikits-demo/assets/main.5e56ea1c.js"></script>
+  <link rel="modulepreload" href="/uikits-demo/assets/dynamic-import-polyfill.feac7147.js">
+  <link rel="modulepreload" href="/uikits-demo/assets/vendor.ce0c5a8e.js">
+</head>
+<body>
+<div id="app">
+    <div>
+        <div style="text-align: center;font-size:1.2em;">
+            UIKits demo
+            <a href="https://github.com/vikseriq/uikits-demo/" target="_blank">[repo]</a>
+            <hr />
+        </div>
+        <nav>
+            <div v-for="demo in demos" :key="demo.code">
+                <a :href="'./'+demo.code+'/'" target="viewport">{{ demo.label }}</a>
+            </div>
+        </nav>
+
+        <iframe ref="iframe" id="viewport" name="viewport" frameborder="off">
+            <div style="display: flex;
+                        align-content: start;
+                        height: 80vh;
+                        align-items: center;
+                        justify-content: center;
+                        color: gray;">
+                <h2 style="text-align:center">pick a kit from the list</h2>
+            </div>
+        </iframe>
+
+    </div>
+</div>
+
+<style>
+    nav {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+    }
+
+    nav > div {
+        margin: 0.5em;
+    }
+
+    #viewport {
+        width: calc(100% - 4em);
+        height: 70vh;
+        box-shadow: 1px 1px 7px 4px gray;
+        margin: 1em;
+        padding: 15px;
+        border-radius: 5px;
+    }
+</style>
+</body>
+</html>
